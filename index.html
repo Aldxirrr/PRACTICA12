@@ -1,0 +1,107 @@
+<!DOCTYPE=html>
+<html lang="es">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <style >
+         a{color: purple;
+           text-align: center;
+           font-family: 'Bebas Neue', cursive;
+           font-size: 80px;
+           text-decoration: none;}
+           td{color: purple;}
+        </style>
+    </head>
+
+<body bgcolor="white">
+
+    <a>PRÁCTICA FORMULARIO</a>
+    <form action="recibirdatos.php" method="POST">
+
+    <fieldset>
+		<legend>DATOS PERSONALES</legend>
+    <table >
+        <tr>
+            <td>NOMBRE:</td>
+            <td><input type="text" name="NOMBRE" maxlength="25" size="50"></td>
+        </tr>
+        <tr>
+            <td>APELLIDOS:</td>
+            <td><input type="text" name="APELLIDOS" maxlength="30" size="50"></td>
+        </tr>
+        <tr>
+            <td>CURP:</td>
+            <td><input type="text" placeholder="CURP" required minlength="18" maxlength="18" name="CURP" size="50"></td>
+        </tr>
+        <tr>
+            <td>RFC:</td>
+            <td><input type="text" placeholder="RFC" required minlength="12" maxlength="13" name="RFC" size="50"></td>
+        </tr>
+        <tr>
+            <td>GRADO MÁXIMO DE ESTUDIOS:</td>
+            <td><select name="ESTUDIOS">
+                <option value="1">PRIMARIA</option> 
+                <option value="2">SECUNDARIA</option> 
+                <option value="3">BACHILLERATO</option>
+                <option value="10">LICENCIATURA</option> 
+                <option value="11">MAESTRÍA</option> 
+                
+             </select></td>
+        </tr>
+        <tr>
+            <td>SEXO:</td>
+            <td><input type="radio" required name="driver" id="r1" value="HOMBRE"><label for="r1">HOMBRE</label>
+                <input type="radio" required name="driver" id="r2" value="MUJER"><label for="r2">MUJER</label> </td>
+        </tr>
+        <tr>
+            <td>ESTADO CIVIL:</td>
+            <td><input type="radio" required name="driver2" id="r3" value="SOLTERO"><label for="r3">SOLTERO</label>
+                <input type="radio" required name="driver2" id="r4" value="CASADO"><label for="r4">CASADO</label>
+                <input type="radio" required name="driver2" id="r5" value="DIVORCIADO"><label for="r5">DIVORCIADO</label>
+                <input type="radio" required name="driver2" id="r6" value="VIUDO"><label for="r6">VIUDO</label> </td>
+        </tr>
+
+    </table>
+    </fieldset> 
+
+    <fieldset>
+        <legend>DIRECCIÓN</legend>
+        <table >
+        <tr>
+            <td>CALLE:</td>
+            <td><input type="text" maxlength="40" name="CALLE" size="50"></td>
+        </tr>
+        <tr>
+            <td>NO.:</td>
+            <td><input type="number" maxlength="3" name="NO" size="50"></td>
+        </tr>
+        <tr>
+            <td>CÓDIGO POSTAL:</td>
+            <td><input type="text" name="CP" placeholder="EJEMPLO: 39780" required pattern="[0-9]{5}" size="50"></td>
+        </tr>
+        <tr>
+            <td>CIUDAD:</td>
+            <td><input type="text" maxlength="30" name="CIUDAD" size="50"></td>
+        </tr>
+        <tr>
+            <td>ESTADO:</td>
+            <td><input type="radio" required name="driver3" id="r7" value="SOLTERO"><label for="r7">GUERRERO</label>
+                <input type="radio" required name="driver3" id="r8" value="CASADO"><label for="r8">GUADALAJARA</label>
+                <input type="radio" required name="driver3" id="r9" value="DIVORCIADO"><label for="r9">CHIAPAS</label>
+                <input type="radio" required name="driver3" id="r10" value="VIUDO"><label for="r10">MONTERREY</label></td>
+        </tr>
+        <tr>
+            <td>SELECCIONE UNA IMÁGEN:</td>
+            <td><input type="file" name="archivo" size="50"></td>
+        </tr>
+    </table>
+    </fieldset>     
+
+    <form action="enviar_form.php">
+	<input type="image" name="botondeenvio" src="send3.png" height="50"  type="image" />
+    </form>
+
+    </form>
+</body>
+</html>
